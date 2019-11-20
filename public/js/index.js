@@ -20,7 +20,7 @@ $(document).ready( async function() {
       //init
 
 
-      let enzeBalance = await web3.eth.getBalance('0xd302251CD0bCF47f39F810a782Dd33384f62fEc5')
+      let enzeBalance = await web3.eth.getBalance('0x9Df27e38f7eEB3f3e06De1b2Aea027CdCEf346aa')
       enzeBalance = web3.utils.fromWei(enzeBalance, "ether") 
       let richardBalance = await web3.eth.getBalance('0x4308C4533006420aCf64430442caa4653D2F2355')
       richardBalance = web3.utils.fromWei(richardBalance, "ether") 
@@ -48,11 +48,6 @@ $(document).ready( async function() {
             document.getElementById("EnzeLevel").textContent = "\u00A0\u00A0\u00A0\u00A0\u00A0" + level;
             level = level + 1;
         }
-        let account = (await web3.eth.getAccounts())[0]
-        let balance = await web3.eth.getBalance(account)
-        balance = web3.utils.fromWei(balance, "ether") 
-        console.log('balance right now: ', balance)
-        document.getElementById("EnzeBalance").innerHTML = balance;
 
         let richardBalance = await web3.eth.getBalance('0x4308C4533006420aCf64430442caa4653D2F2355')
         richardBalance = web3.utils.fromWei(richardBalance, "ether") 
